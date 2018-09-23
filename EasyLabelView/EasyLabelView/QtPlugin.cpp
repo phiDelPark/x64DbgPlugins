@@ -18,16 +18,13 @@ void QtPlugin::Setup()
 {
     QWidget* parent = getParent();
     pluginTabWidget = new PluginTabWidget(parent);
-    GuiAddQWidgetTab(pluginTabWidget);
 }
 
 void QtPlugin::Stop()
 {
-    GuiCloseQWidgetTab(pluginTabWidget);
     delete pluginTabWidget;
 }
 
 void QtPlugin::ShowTab()
 {
-    GuiShowQWidgetTab(pluginTabWidget);
 }
