@@ -1,0 +1,4 @@
+# x64DbgPlugins
+
+- EasyLabelView
+--
