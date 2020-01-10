@@ -37,10 +37,12 @@ extern "C" __declspec(dllexport) void plugsetup(PLUG_SETUPSTRUCT* setupStruct)
     Plugin::hMenuDump = setupStruct->hMenuDump;
     Plugin::hMenuStack = setupStruct->hMenuStack;
     GuiExecuteOnGuiThread(QtPlugin::Setup);
+    QtPlugin::WaitForSetup();
 }
 
 extern "C" __declspec(dllexport) bool plugstop()
 {
     GuiExecuteOnGuiThread(QtPlugin::Stop);
+    QtPlugin::WaitForStop();
     return true;
 }
